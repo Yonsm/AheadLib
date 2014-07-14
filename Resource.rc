@@ -1,0 +1,156 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "Windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""Windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""Resource\\Resource.rc2""\r\n"
+    "#endif //_WIN32\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_Main                ICON                    "Resource\\Main.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "Resource\\ClassXP.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Main DIALOGEX 0, 0, 472, 307
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "AheadLib"
+FONT 9, "宋体", 400, 0, 0x86
+BEGIN
+    GROUPBOX        "文件",IDC_STATIC,5,6,207,52
+    LTEXT           "输入 DLL(&D):",IDC_STATIC,11,21,48,8
+    EDITTEXT        IDC_DllFile,63,19,126,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BrowseDll,192,19,14,13,BS_FLAT
+    LTEXT           "输出 CPP(&C):",IDC_STATIC,11,39,48,8
+    EDITTEXT        IDC_CppFile,63,37,126,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BrowseCpp,192,37,14,13,BS_FLAT
+    DEFPUSHBUTTON   "生成(&G)",IDOK,5,68,47,15,WS_DISABLED
+    PUSHBUTTON      "选项(&O)>>",IDC_Options,58,68,47,15
+    PUSHBUTTON      "关于(&A)",IDC_About,111,68,47,15
+    PUSHBUTTON      "退出(&X)",IDCANCEL,164,68,47,15
+    GROUPBOX        "转发",IDC_STATIC,5,92,207,42
+    CONTROL         "直接转发函数(&R)",IDC_CallRedirect,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,11,105,108,11
+    CONTROL         "即时调用函数(&I)",IDC_CallInTime,"Button",
+                    BS_AUTORADIOBUTTON,11,118,108,11
+    GROUPBOX        "载入",IDC_STATIC,5,138,207,42
+    CONTROL         "在入口中载入原始 DLL(&E)",IDC_LoadInEntry,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,11,151,108,11
+    CONTROL         "在需要时载入原始 DLL(&N)",IDC_LoadIfNeed,"Button",
+                    BS_AUTORADIOBUTTON,11,163,108,11
+    GROUPBOX        "调用",IDC_STATIC,5,184,207,42
+    CONTROL         "直接跳入原始函数(&J)",IDC_JumpToOrigin,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,11,198,108,11
+    CONTROL         "调用原始函数后返回(&T)",IDC_CallOrigin,"Button",
+                    BS_AUTORADIOBUTTON,11,210,108,11
+    CONTROL         "支持多线程(&M)",IDC_MultiThread,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,138,210,68,10
+    GROUPBOX        "原始",IDC_STATIC,5,230,207,33
+    LTEXT           "原始 DLL(&L):",IDC_STATIC,11,245,48,8
+    EDITTEXT        IDC_OriginDll,63,243,70,13,ES_AUTOHSCROLL
+    CONTROL         "系统路径(&S)",IDC_SystemPath,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,138,245,68,10
+    GROUPBOX        "其它",IDC_STATIC,5,267,207,33
+    CONTROL         "生成 HOOK 代码(&H)",IDC_GenerateHook,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,283,108,10
+    EDITTEXT        IDC_Preview,226,10,238,290,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#include "Resource\Resource.rc2"
+#endif //_WIN32
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,74 @@
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 预处理
+#include "Define.h"
+
+#ifdef APSTUDIO_INVOKED
+#error 此文件不能由 Microsoft Visual C++ 编辑
+#endif //APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 版本信息宏定义
+#ifdef _DEBUG
+#define VS_FileFlags VS_FF_DEBUG
+#else // _DEBUG
+#define VS_FileFlags 0
+#endif // _DEBUG
+
+#ifdef _DLL
+#define VS_FileType VFT_DLL
+#define VS_FileName STR_AppName EXT_Dll
+#else // _DLL
+#define VS_FileType VFT_APP
+#define VS_FileName STR_AppName EXT_Exe
+#endif // _DLL
+
+#ifdef _CHS
+#define VS_Language 0x0804
+#define VS_Codepage 0x03A8
+#define VS_LanguageCodepage		"080403A8"
+#else // _CHS
+#define VS_Language 0x0409
+#define VS_Codepage 0x04E4
+#define VS_LanguageCodepage		"040904E4"
+#endif // _CHS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 版本信息
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION VER_Major, VER_Minor, VER_Release, VER_Build
+PRODUCTVERSION VER_Major, VER_Minor, VER_Release, VER_Build
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEFLAGS 0
+FILEOS VOS__WINDOWS32
+FILETYPE VS_FileType
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK VS_LanguageCodepage
+		BEGIN
+			VALUE "FileVersion", STR_Version
+			VALUE "FileDescription", STR_Description
+			VALUE "ProductName", STR_AppName
+			VALUE "ProductVersion", STR_Version
+			VALUE "CompanyName", STR_Corporation
+			VALUE "LegalCopyright", STR_Copyright
+			VALUE "Comments", "Powered by " STR_Author "."
+			VALUE "OriginalFilename", VS_FileName
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", VS_Language, VS_Codepage
+	END
+END
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
